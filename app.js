@@ -7,7 +7,8 @@ new Vue({
     data: {
         name: "Keren", // will interpolate data with the key value pairs
         job: "developer",
-        website: "https://github.com/mungaikeren"
+        website: "https://github.com/mungaikeren",
+        websiteTag: "<a href='http://github.com/mungaikeren'>Git hub</a>"
     },
     // methods. call the function to the html and it will just render the info to the DOM
     methods: {
