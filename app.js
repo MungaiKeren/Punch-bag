@@ -7,6 +7,7 @@ new Vue({
     data: {
         name: "Keren", // will interpolate data with the key value pairs
         job: "developer",
+        age: 20,
         website: "https://github.com/mungaikeren",
         websiteTag: "<a href='http://github.com/mungaikeren'>Git hub</a>"
     },
@@ -14,6 +15,14 @@ new Vue({
     methods: {
         greet: function(time){
             return "Good" + time + " " + this.name;
+        },
+        add: function(inc){
+            var newAge = this.age += inc;
+            return newAge;
+        },
+        subtract: function(dec){
+            var removeAge = this.age -= dec;
+            return removeAge;
         }
     }
 });
