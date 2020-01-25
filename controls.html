@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controls</title>
+</head>
+<body>
+    <div id="controls">
+        <h1>Conditions</h1>
+        <!-- can either use v-if or v-show -->
+        <button @click="error = !error">Toggle error</button>
+        <button @click="success = !success">Toggle Success</button>
+
+        <!-- <p v-if='error'>There has been an error</p>
+        <p v-else-if='success'>Success!!</p> -->
+
+        <p v-show="error">There has been an error</p>
+        <p v-show='success'>Whoo success :)</p>
+
+        <!-- so whats the difference???
+        v-if takes the element out of the DOM while v-show gives it a styling of display: none;  -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="controls.js"></script>
+</body>
+</html>
