@@ -92,6 +92,27 @@ new Vue({
     },
 });
 
+
+new Vue({
+    el: '#dynamic-css',
+    data:{
+        available: false,
+        nearby: false,
+    },
+    methods:{
+
+    },
+    computed:{
+        compClasses: function(){
+            // errors experienced, failing to return
+            return{
+                available:this.available,
+                nearby:this.nearby,
+            }
+        },
+    }
+});
+
 new Vue({
     el: '#canvas',
     data: {
