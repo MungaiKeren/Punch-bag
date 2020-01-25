@@ -23,9 +23,44 @@ new Vue({
         subtract: function(dec){
             var removeAge = this.age -= dec;
             return removeAge;
-        }
+        },
+        click: function(){
+            alert("you clicked me")
+        },
     }
 });
+
+new Vue({
+    el: '#keyboard-events',
+    data: {
+
+    },
+    methods: {
+        logName: function(){
+            console.log("You entered your name")
+        },
+        logAge: function(){
+            console.log("you entered your age")
+        },
+    }
+})
+
+new Vue({
+    el: '#two-way-binding',
+    data: {
+        name: "",
+        age:""
+    },
+    methods: {
+        logName: function(){
+
+        },
+        logAge: function(){
+            
+        }
+
+    }
+})
 
 new Vue({
     el: '#canvas',

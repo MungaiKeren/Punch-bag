@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Vue js tutorial</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="vue-app">
         <!-- called a method and passed in a parameter to the method. -->
@@ -27,13 +29,38 @@
 
         <!-- events in vuejs. hover, click etc -->
         <!-- when triggering an event you dont have to call the function using paranthesis -->
-        <button @click="add(1)">Add a year</button>
+        <button @click.once="add(1)">Add a year</button>
         <button v-on:click="subtract(1)">Subtract an year</button>
         <button @dblclick="add(10)">Add 10 years</button>
         <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
         <p>My age is {{ age }}</p>
 
+        <!-- mouse event modifiers -->
+        <a @click.prevent="click" href="https://github.com/mungaikeren">
+            click me
+        </a>
     </div>
+
+    <div id="keyboard-events">
+        <!-- keyboard event modifiers -->
+        <h1>Keyboard events</h1>
+        <label for="name">Name</label>
+        <input type="text" v-on:keyup.tab.enter="logName">
+        <label for="age">Age</label>
+        <input type="text" v-on:keyup.alt.enter="logAge">
+    </div>
+
+    <div id="two-way-binding">
+        <h1>Two way data binding</h1>
+        <label for="name">Name</label>
+        <input type="text"  v-model="name">
+        <span>{{ name }}</span>
+
+        <label for="age">Age</label>
+        <input type="text" v-model="age" name="" id="">
+        <span>{{ age }}</span>
+    </div>
+
 
     <div id="canvas" v-on:mousemove='updateXY'>
         {{ x }},
@@ -43,4 +70,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
