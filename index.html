@@ -61,6 +61,16 @@
         <span>{{ age }}</span>
     </div>
 
+    <div id="computed-properties">
+        <h1>Computed properties</h1>
+        <button @click="a++">Add to a</button>
+        <button @click="b++">Add to b</button>
+
+        <p>The current age is {{ age}}</p>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
+    </div>
+
 
     <div id="canvas" v-on:mousemove='updateXY'>
         {{ x }},

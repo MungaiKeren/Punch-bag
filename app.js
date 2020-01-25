@@ -56,11 +56,41 @@ new Vue({
 
         },
         logAge: function(){
-            
         }
 
     }
-})
+});
+
+new Vue({
+    el: '#computed-properties',
+    data:{
+        age: 20,
+        a:0,
+        b:0,
+    },
+    // this methods in vue will run the two functions
+    methods:{
+        // addToA: function(){
+        //     console.log("addToA")
+        //     return this.a + this.age;
+        // },
+        // addToB: function(){
+        //     console.log("addToB")
+        //     return this.b + this.age;
+        // },
+    },
+    // computed properties  watch the variables to be computed and only run when needed
+    computed:{
+        addToA: function(){
+            console.log("addToA")
+            return this.a + this.age;
+        },
+        addToB: function(){
+            console.log("addToB")
+            return this.b + this.age;
+        },
+    },
+});
 
 new Vue({
     el: '#canvas',
