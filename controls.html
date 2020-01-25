@@ -13,11 +13,12 @@
         <button @click="error = !error">Toggle error</button>
         <button @click="success = !success">Toggle Success</button>
 
-        <!-- <p v-if='error'>There has been an error</p>
-        <p v-else-if='success'>Success!!</p> -->
+        <p v-if='error'>There has been an error</p>
+        <p v-else-if='success'>Success!!</p>
+        <p v-else=''>click one of the buttons</p>
 
-        <p v-show="error">There has been an error</p>
-        <p v-show='success'>Whoo success :)</p>
+        <!-- <p v-show="error">There has been an error</p>
+        <p v-show='success'>Whoo success :)</p> -->
 
         <!-- so whats the difference???
         v-if takes the element out of the DOM while v-show gives it a styling of display: none;  -->
