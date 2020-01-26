@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>punch bag game</title>
+</head>
+<body class="container">
+    <div id="vue-app">
+        <!-- bag image -->
+        <div id="bag" v-bind:class="{burst:ended}"></div>
+
+        <!-- bag health -->
+        <div id="bag-health">
+            <div v-bind:style="{width: health + '%'}"></div>
+        </div>
+
+        <!-- game controls -->
+        <div id="controls">
+            <button @click="punch" v-if="!ended" class="btn center btn-sm btn-success">Punch</button>
+            <button @click="restart" v-show="ended" class="btn center btn-sm btn-success">Restart</button>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
