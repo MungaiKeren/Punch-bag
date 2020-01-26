@@ -23,6 +23,21 @@
         <!-- so whats the difference???
         v-if takes the element out of the DOM while v-show gives it a styling of display: none;  -->
     </div>
+
+
+    <div id="loop">
+        <h1>Looping through lists</h1>
+        <ol>
+            <li v-for="character in characters">{{character}}</li>
+        </ol>
+
+        <h2>Looping through lists with key value pairs</h2>
+        <ol>
+            <li v-for="ninja in ninjas">Name: {{ ninja.name }}, Age: {{ ninja.age}}</li>
+        </ol>
+
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="controls.js"></script>
 </body>
